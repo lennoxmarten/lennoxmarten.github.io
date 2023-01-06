@@ -1,0 +1,4 @@
+BUGS AND THINGS THAT NEED TO BE FIXED:
+
+- Replace static line with dynamic path 
+- Make JSON directly pullable without creating additional document
