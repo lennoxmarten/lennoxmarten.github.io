@@ -5,7 +5,7 @@ var wawiSwitchChecked = true;
 var shopsystemeSwitchChecked = true; 
 var _JsonData;
 var filtered_JsonData;
-var bubbleSize = 20;
+var bubbleSize = 30;
 
 
 
@@ -52,8 +52,8 @@ fetch('VISO_Daten.xlsx').then(function (res) {
   _JsonData.reduce((prev, servprov, index) => {
     servprov.text = servprov.Firmenname;
     servprov.id = index;
-    servprov.x = 300;
-    servprov.y = 50;
+    servprov.x = 800;
+    servprov.y = 250;
     return servprov;
   }, {});
   console.log("This is the JSON data:" ,_JsonData);
@@ -252,6 +252,7 @@ $(".prompt").select2({
           .attr("fill", d => fillColour(d.Service))
           .attr("id", d => d.id)
           .attr("Firmenname", d => d.Firmenname)
+          .style("fill", "url(#image)");
 
           const text = svg.selectAll('text')
           .data(filtered_JsonData)
