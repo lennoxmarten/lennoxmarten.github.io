@@ -252,7 +252,7 @@ $(".prompt").select2({
           .attr("fill", d => fillColour(d.Service))
           .attr("id", d => d.id)
           .attr("Firmenname", d => d.Firmenname)
-          .style("fill", "url(#image)");
+          .style("fill", "url(#image004)");
 
           const text = svg.selectAll('text')
           .data(filtered_JsonData)
